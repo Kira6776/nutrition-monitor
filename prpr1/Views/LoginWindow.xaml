@@ -8,7 +8,20 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginWindow">
 
-    <Grid>
-        
+    <Grid Background="#FF73669E">
+        <Border HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFF2F2F2" CornerRadius="12" Padding="30,25">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="100" ShadowDepth="3" Opacity="0.2"/>
+            </Border.Effect>
+            <StackPanel Orientation="Vertical" Width="400">
+                <TextBlock Text="Авторизация" FontSize="28" FontWeight="SemiBold" Foreground="#FF462C50" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                <TextBlock Text="Логин" FontSize="16" Foreground="#FF555555" Margin="0,0,0,5"/>
+                <TextBox x:Name="LoginTextBox" FontSize="16" Padding="8,6" Background="White" BorderBrush="#FFB0BEC5" BorderThickness="1"/>
+                <TextBlock Text="Пароль" FontSize="16" Foreground="#FF555555" Margin="0,15,0,5"/>
+                <PasswordBox x:Name="PasswordBox" FontSize="16" Padding="8,6" Background="White" BorderBrush="#FFB0BEC5" BorderThickness="1"/>
+                <Button x:Name="LoginButton" Content="Войти" FontSize="16" Foreground="White" Background="#FF73669E" BorderThickness="0" Padding="0,10" Margin="0,25,0,10" Cursor="Hand"/>
+                <Button x:Name="RegistButton" Content="Зарегистрироваться" FontSize="16" Foreground="#FF73669E" Background="Transparent" BorderBrush="#FF73669E" BorderThickness="1" Padding="0,10" Cursor="Hand"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>

@@ -1,0 +1,127 @@
+﻿<Page x:Class="prpr1.Views.UserProfile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:prpr1.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserProfile">
+
+    <Grid Background="#FFF4F2F6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="210"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#FF462C50">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="20,22,10,10">
+                    <TextBlock Text="Мониторинг" FontSize="20" FontWeight="SemiBold" Foreground="White"/>
+                    <TextBlock Text="питания" FontSize="20" FontWeight="SemiBold" Foreground="#FFD8CEDD"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="10,15,10,10">
+                    <Button Content="Профиль" Height="42" Margin="0,3" FontSize="14" Foreground="White" Background="#FF73669E" BorderBrush="#FF73669E" BorderThickness="0" HorizontalContentAlignment="Left" Padding="15,0" Cursor="Hand"/>
+                    <Button Content="Дневник" Height="42" Margin="0,3" FontSize="14" Foreground="White" Background="#FF462C50" BorderBrush="#FF462C50" BorderThickness="0" HorizontalContentAlignment="Left" Padding="15,0" Cursor="Hand"/>
+                    <Button Content="Продукты" Height="42" Margin="0,3" FontSize="14" Foreground="White" Background="#FF462C50" BorderBrush="#FF462C50" BorderThickness="0" HorizontalContentAlignment="Left" Padding="15,0" Cursor="Hand"/>
+                    <Button Content="Отчёты" Height="42" Margin="0,3" FontSize="14" Foreground="White" Background="#FF462C50" BorderBrush="#FF462C50" BorderThickness="0" HorizontalContentAlignment="Left" Padding="15,0" Cursor="Hand"/>
+                    <Button Content="Справочник" Height="42" Margin="0,3" FontSize="14" Foreground="White" Background="#FF462C50" BorderBrush="#FF462C50" BorderThickness="0" HorizontalContentAlignment="Left" Padding="15,0" Cursor="Hand"/>
+                    <Button Content="Вес" Height="42" Margin="0,3" FontSize="14" Foreground="White" Background="#FF462C50" BorderBrush="#FF462C50" BorderThickness="0" HorizontalContentAlignment="Left" Padding="15,0" Cursor="Hand"/>
+                </StackPanel>
+
+                <Button Grid.Row="2" Content="Выйти" Height="38" Margin="10,5" FontSize="14" Foreground="#FFE8DDEB" Background="#FF462C50" BorderBrush="#FF6A526F" BorderThickness="1" HorizontalContentAlignment="Center" Cursor="Hand"/>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Column="1" Margin="35,25,35,25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Margin="0,0,0,20">
+                <TextBlock Text="Профиль" FontSize="26" FontWeight="SemiBold" Foreground="#FF462C50"/>
+                <TextBlock Text="Личные данные и параметры питания" FontSize="14" Foreground="#FF777177" Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="30" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <Border.Effect>
+                    <DropShadowEffect Color="#40000000" BlurRadius="12" ShadowDepth="2" Opacity="0.15"/>
+                </Border.Effect>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" HorizontalAlignment="Center" Margin="0,10,25,0">
+                        <Ellipse Width="100" Height="100" Fill="#FFE1DDE5"/>
+                        <TextBlock Text="ФИО" FontSize="17" FontWeight="SemiBold" Foreground="#FF462C50" HorizontalAlignment="Center"/>
+                        <TextBlock Text="почта" FontSize="12" Foreground="#FF777177" HorizontalAlignment="Center" Margin="0,5,0,15"/>
+                        <Button Content="Изменить фото" FontSize="12" Foreground="#FF73669E" Background="White" BorderBrush="#FF73669E" BorderThickness="1" Padding="12,7" Cursor="Hand"/>
+                        <Border Height="1" Background="#FFE1DDE5" Margin="0,25,0,20"/>
+                        <TextBlock Text="Текущий вес" FontSize="12" Foreground="#FF777177"/>
+                        <TextBlock Text=" кг" FontSize="18" FontWeight="SemiBold" Foreground="#FF462C50" Margin="0,2,0,12"/>
+                        <TextBlock Text="Целевой вес" FontSize="12" Foreground="#FF777177"/>
+                        <TextBlock Text=" кг" FontSize="18" FontWeight="SemiBold" Foreground="#FF462C50" Margin="0,2,0,12"/>
+                        <TextBlock Text="Норма калорий" FontSize="12" Foreground="#FF777177"/>
+                        <TextBlock Text=" ккал" FontSize="18" FontWeight="SemiBold" Foreground="#FF462C50" Margin="0,2,0,0"/>
+                    </StackPanel>
+
+                    <Grid Grid.Column="1" Margin="20,5,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="Имя" FontSize="13" Foreground="#FF555555" Margin="0,0,0,5"/>
+                        <TextBox Grid.Row="1" Height="38" FontSize="14" Padding="10,7" Background="#FFF9F8FA" BorderBrush="#FFD5CFD9" BorderThickness="1" Text="ФИО" Margin="0,0,0,15"/>
+
+                        <TextBlock Grid.Row="2" Text="Email" FontSize="13" Foreground="#FF555555" Margin="0,0,0,5"/>
+                        <TextBox Grid.Row="3" Height="38" FontSize="14" Padding="10,7" Background="#FFF9F8FA" BorderBrush="#FFD5CFD9" BorderThickness="1" Text="почта" Margin="0,0,0,15"/>
+
+                        <Grid Grid.Row="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" Margin="0,0,8,0">
+                                <TextBlock Text="Текущий вес" FontSize="13" Foreground="#FF555555" Margin="0,0,0,5"/>
+                                <TextBox Height="38" FontSize="14" Padding="10,7" Background="#FFF9F8FA" BorderBrush="#FFD5CFD9" BorderThickness="1" Text="00"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Margin="8,0">
+                                <TextBlock Text="Целевой вес" FontSize="13" Foreground="#FF555555" Margin="0,0,0,5"/>
+                                <TextBox Height="38" FontSize="14" Padding="10,7" Background="#FFF9F8FA" BorderBrush="#FFD5CFD9" BorderThickness="1" Text="00"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" Margin="8,0,0,0">
+                                <TextBlock Text="Норма калорий" FontSize="13" Foreground="#FF555555" Margin="0,0,0,5"/>
+                                <TextBox Height="38" FontSize="14" Padding="10,7" Background="#FFF9F8FA" BorderBrush="#FFD5CFD9" BorderThickness="1" Text="00"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,25,0,0">
+                            <Button Content="Отмена" FontSize="14" Foreground="#FF555555" Background="White" BorderBrush="#FFD5CFD9" BorderThickness="1" Padding="22,9" Margin="0,0,10,0" Cursor="Hand"/>
+                            <Button Content="Сохранить" FontSize="14" Foreground="White" Background="#FF73669E" BorderBrush="#FF73669E" BorderThickness="0" Padding="25,10" Cursor="Hand"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

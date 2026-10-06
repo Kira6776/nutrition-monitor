@@ -1,5 +1,4 @@
-﻿using prpr1.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace prpr1
+namespace prpr1.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для UserProfile.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserProfile : Page
     {
-        public MainWindow()
+        public UserProfile()
         {
             InitializeComponent();
-            MainFrame.Navigate(new LoginWindow());
         }
     }
 }
